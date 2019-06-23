@@ -73,40 +73,54 @@ class ClickyGame extends Component {
     onCardClick = (id) => {
         console.log(id);
 
-        //search the element in the aquarium[] that has the 'id'
-        this.state.aquarium.map((fish, index) => {
-            
-            // found the matching 'id'
-            if(fish.id===id){
-                //this fish has not been clicked
-                if(this.state.aquarium[index]===false){
-                    // increment score
+        let aquarium2 = this.state.aquarium
 
-                    // update high score
-                } 
-            }
-        });
+        // need to find the array element  that hold the 'id'
+        const index = aquarium2.findIndex(element => {
+            return element.id===id
+        });    
+
+        //exit if not found
+        if(index===-1) return false;
+
+        //this fish has not been clicked
+        if(aquarium2[index].wasClicked===false){
+            //set to TRUE
+            aquarium2[index].wasClicked=true;
+            console.log(`SAFE: ${index}`);
+            // increment score
+
+            // update high score
         
-        //update the scoreBoard
 
-        //shuffle the array
+        // GAMEOVER
+        } else {
+            // reset the score
+            console.log("WRONG");
+        }
 
+        //run the shuffle
+        const shuffledAquarium = this.shuffleArray(aquarium2);
 
+        // save the array back to the state
+        this.setState({aquarium: shuffledAquarium});
+        console.log(this.state.aquarium);
+    }        
 
-
-        // this.setState({fishThatWasTapped: index});
-        
+    shuffleArray(arr){
+ 
         // shuffle the array
-        // this.state.aquarium.map((index) => {
-        //     const randomIndex = Math.floor(Math.random()*12);
-          
-        //     //swap array elements, aquarium[index] <=> aquarium[randomNumber]
-        //     // const currentElement = this.state.aquarium[index];
-        //     // const newElement = this.state.aquarium[randomIndex];
-
-        //     // this.setState({aquarium[index]})
-
-        // });
+        arr.map((element ,index) => {
+            const randomIndex = Math.floor(Math.random()*parseInt(arr.length));
+            console.log(`INDEX: ${index}    RANDOM: ${randomIndex}`);
+            //swap array elements, aquarium[index] <=> aquarium[randomNumber]
+            const original = arr[index];
+            arr[index] = arr[randomIndex];
+            arr[randomIndex] = original;
+        });
+        console.log("Shuffled");
+        console.log(arr);
+        return arr;
     }
 
     render() {
