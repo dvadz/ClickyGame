@@ -4,7 +4,8 @@ import GameBoard from "./GameBoard";
 
 class ClickyGame extends Component {
     state = {
-        fishThatWasTapped: 13,
+        score: 0,
+        highScore: 0,
         aquarium: [
             {
                 source: "/images/1.jpg",
@@ -88,14 +89,30 @@ class ClickyGame extends Component {
             //set to TRUE
             aquarium2[index].wasClicked=true;
             console.log(`SAFE: ${index}`);
-            // increment score
+            
+            // increment score and high Score
+            let currentScore = this.state.score + 1;
+            let currentHighScore = this.state.highScore;
 
-            // update high score
-        
+            if(currentScore > currentHighScore){
+                currentHighScore = currentScore;
+            }
 
-        // GAMEOVER
+            this.setState({
+                score: currentScore,
+                highScore: currentHighScore
+            })
+
+            // GAMEOVER
         } else {
+            
+            // set "wasClicked" to false to start a new game
+            aquarium2.forEach(fish => {
+                fish.wasClicked = false;
+            });
+
             // reset the score
+            this.setState({score: 0})
             console.log("WRONG");
         }
 
@@ -104,7 +121,7 @@ class ClickyGame extends Component {
 
         // save the array back to the state
         this.setState({aquarium: shuffledAquarium});
-        console.log(this.state.aquarium);
+        // console.log(this.state.aquarium);
     }        
 
     shuffleArray(arr){
@@ -112,21 +129,21 @@ class ClickyGame extends Component {
         // shuffle the array
         arr.map((element ,index) => {
             const randomIndex = Math.floor(Math.random()*parseInt(arr.length));
-            console.log(`INDEX: ${index}    RANDOM: ${randomIndex}`);
+            // console.log(`INDEX: ${index}    RANDOM: ${randomIndex}`);
             //swap array elements, aquarium[index] <=> aquarium[randomNumber]
             const original = arr[index];
             arr[index] = arr[randomIndex];
             arr[randomIndex] = original;
         });
-        console.log("Shuffled");
-        console.log(arr);
+        // console.log("Shuffled");
+        // console.log(arr);
         return arr;
     }
 
     render() {
         return (
             <div>
-                <ScoreBoard/>
+                <ScoreBoard score={this.state.score} highScore={this.state.highScore} />
                 <GameBoard aquarium={this.state.aquarium} onCardClick={this.onCardClick}/>
             </div>
         )
