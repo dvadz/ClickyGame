@@ -1,73 +1,76 @@
 import React, {Component} from 'react';
 import ScoreBoard from "./ScoreBoard";
 import GameBoard from "./GameBoard";
+import sourceArray from "./images"
 
 class ClickyGame extends Component {
     state = {
         score: 0,
         highScore: 0,
-        aquarium: [
-            {
-                source: "/images/1.jpg",
-                id: 1,
-                wasClicked: false
-            },
-            {
-                source: "/images/2.jpg",
-                id: 2,
-                wasClicked: false
-            },
-            {
-                source: "/images/3.jpg",
-                id: 3,
-                wasClicked: false
-            },
-            {
-                source: "/images/4.jpg",
-                id: 4,
-                wasClicked: false
-            },
-            {
-                source: "/images/5.jpg",
-                id: 5,
-                wasClicked: false
-            },
-            {
-                source: "/images/6.jpg",
-                id: 6,
-                wasClicked: false
-            },
-            {
-                source: "/images/7.jpg",
-                id: 7,
-                wasClicked: false
-            },
-            {
-                source: "/images/8.jpg",
-                id: 8,
-                wasClicked: false
-            },
-            {
-                source: "/images/9.jpg",
-                id: 9,
-                wasClicked: false
-            },
-            {
-                source: "/images/10.jpg",
-                id: 10,
-                wasClicked: false
-            },
-            {
-                source: "/images/11.jpg",
-                id: 11,
-                wasClicked: false
-            },
-            {
-                source: "/images/12.jpg",
-                id: 12,
-                wasClicked: false
-            }
-        ]
+        aquarium: sourceArray
+        // aquarium: [
+        //     {
+        //         source: "/images/1.jpg",
+        //         id: 1,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/2.jpg",
+        //         id: 2,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/3.jpg",
+        //         id: 3,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/4.jpg",
+        //         id: 4,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/5.jpg",
+        //         id: 5,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/6.jpg",
+        //         id: 6,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/7.jpg",
+        //         id: 7,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/8.jpg",
+        //         id: 8,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/9.jpg",
+        //         id: 9,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/10.jpg",
+        //         id: 10,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/11.jpg",
+        //         id: 11,
+        //         wasClicked: false
+        //     },
+        //     {
+        //         source: "/images/12.jpg",
+        //         id: 12,
+        //         wasClicked: false
+        //     }
+        // ]
+
 
     };
 
