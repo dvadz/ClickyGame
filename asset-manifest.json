@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/ClickyGame/static/css/main.81a03cc1.chunk.css",
-    "main.js": "/ClickyGame/static/js/main.2f29cbf6.chunk.js",
-    "main.js.map": "/ClickyGame/static/js/main.2f29cbf6.chunk.js.map",
+    "main.css": "/ClickyGame/static/css/main.6923f405.chunk.css",
+    "main.js": "/ClickyGame/static/js/main.c914791e.chunk.js",
+    "main.js.map": "/ClickyGame/static/js/main.c914791e.chunk.js.map",
     "runtime~main.js": "/ClickyGame/static/js/runtime~main.1eb9bb0a.js",
     "runtime~main.js.map": "/ClickyGame/static/js/runtime~main.1eb9bb0a.js.map",
-    "static/js/2.d6a534e5.chunk.js": "/ClickyGame/static/js/2.d6a534e5.chunk.js",
-    "static/js/2.d6a534e5.chunk.js.map": "/ClickyGame/static/js/2.d6a534e5.chunk.js.map",
+    "static/js/2.18321ebe.chunk.js": "/ClickyGame/static/js/2.18321ebe.chunk.js",
+    "static/js/2.18321ebe.chunk.js.map": "/ClickyGame/static/js/2.18321ebe.chunk.js.map",
     "index.html": "/ClickyGame/index.html",
-    "precache-manifest.deaf38bc2789466e5f30602305a1dc19.js": "/ClickyGame/precache-manifest.deaf38bc2789466e5f30602305a1dc19.js",
+    "precache-manifest.5065f02fa3bc7c03ef8353cd7e1cba8a.js": "/ClickyGame/precache-manifest.5065f02fa3bc7c03ef8353cd7e1cba8a.js",
     "service-worker.js": "/ClickyGame/service-worker.js",
-    "static/css/main.81a03cc1.chunk.css.map": "/ClickyGame/static/css/main.81a03cc1.chunk.css.map"
+    "static/css/main.6923f405.chunk.css.map": "/ClickyGame/static/css/main.6923f405.chunk.css.map",
+    "static/media/1.jpg": "/ClickyGame/static/media/1.6baf3a8c.jpg",
+    "static/media/10.jpg": "/ClickyGame/static/media/10.4e7c4b99.jpg",
+    "static/media/11.jpg": "/ClickyGame/static/media/11.4193e665.jpg",
+    "static/media/12.jpg": "/ClickyGame/static/media/12.8d49b2e9.jpg",
+    "static/media/2.jpg": "/ClickyGame/static/media/2.6f376e04.jpg",
+    "static/media/3.jpg": "/ClickyGame/static/media/3.e60e27f9.jpg",
+    "static/media/4.jpg": "/ClickyGame/static/media/4.8eb9983a.jpg",
+    "static/media/5.jpg": "/ClickyGame/static/media/5.51a442ca.jpg",
+    "static/media/6.jpg": "/ClickyGame/static/media/6.25ccb161.jpg",
+    "static/media/7.jpg": "/ClickyGame/static/media/7.9c77b191.jpg",
+    "static/media/8.jpg": "/ClickyGame/static/media/8.40991a98.jpg",
+    "static/media/9.jpg": "/ClickyGame/static/media/9.6568d2c0.jpg"
   }
 }
